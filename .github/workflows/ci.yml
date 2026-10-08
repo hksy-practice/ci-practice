@@ -6,3 +6,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: bash test.sh
+      - name: Build
+        run: |
+          mkdir dist
+          cp greet.sh dist/
+          echo "Built from commit $GITHUB_SHA" > dist/VERSION
+      - uses: actions/upload-artifact@v4
+        with:
+          name: app
+          path: dist/
