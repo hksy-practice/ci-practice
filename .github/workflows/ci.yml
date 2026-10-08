@@ -7,3 +7,4 @@ jobs:
       - uses: actions/checkout@v4
       - run: echo "Hello from CI on $(uname -a)"
       - run: ls -la
+      - run: exit 1
