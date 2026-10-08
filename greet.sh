@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "Hi, $1!"
+echo "Hey, $1!"
